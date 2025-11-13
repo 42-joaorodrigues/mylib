@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   ml_print.h                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: joao-alm <support@toujoustudios.net>       +#+  +:+       +#+        */
+/*   By: joao-alm <joao-alm@student.42luxembourg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/30 20:38:36 by joao-alm          #+#    #+#             */
-/*   Updated: 2024/10/30 20:38:40 by joao-alm         ###   ########.fr       */
+/*   Updated: 2025/11/13 15:31:02 by joao-alm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef JAL_PRINT_H
-# define JAL_PRINT_H
+#ifndef ML_PRINT_H
+# define ML_PRINT_H
 
 // Put FD
 void	ft_putchar_fd(char c, int fd);

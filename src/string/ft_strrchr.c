@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: joao-alm <joao-alm@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: joao-alm <joao-alm@student.42luxembourg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 22:11:35 by joao-alm          #+#    #+#             */
-/*   Updated: 2024/10/22 22:11:58 by joao-alm         ###   ########.fr       */
+/*   Updated: 2025/11/13 15:27:02 by joao-alm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "jal_string.h"
+#include "ml_string.h"
 
 /**
  * Locates the last character occurrence in 1-e string

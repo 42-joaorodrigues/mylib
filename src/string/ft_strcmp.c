@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vigde-ol <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: joao-alm <joao-alm@student.42luxembourg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/03 14:48:32 by vigde-ol          #+#    #+#             */
-/*   Updated: 2025/03/03 14:48:38 by vigde-ol         ###   ########.fr       */
+/*   Updated: 2025/11/13 15:27:02 by joao-alm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "jal_string.h"
+#include "ml_string.h"
 
 int	ft_strcmp(const char *s1, const char *s2)
 {

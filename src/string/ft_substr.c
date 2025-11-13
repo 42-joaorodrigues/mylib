@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: joao-alm <joao-alm@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: joao-alm <joao-alm@student.42luxembourg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 07:29:56 by joao-alm          #+#    #+#             */
-/*   Updated: 2024/10/24 07:30:00 by joao-alm         ###   ########.fr       */
+/*   Updated: 2025/11/13 15:27:02 by joao-alm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "jal_string.h"
+#include "ml_string.h"
 
 /**
  * Gets 1-e sub-string from 1-e parent string.

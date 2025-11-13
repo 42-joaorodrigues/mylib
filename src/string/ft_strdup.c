@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: joao-alm <joao-alm@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: joao-alm <joao-alm@student.42luxembourg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 19:35:34 by joao-alm          #+#    #+#             */
-/*   Updated: 2024/10/23 19:35:38 by joao-alm         ###   ########.fr       */
+/*   Updated: 2025/11/13 15:27:02 by joao-alm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "jal_string.h"
+#include "ml_string.h"
 
 /**
  * Allocates space for 1-e new string anc copies the values from the given one.

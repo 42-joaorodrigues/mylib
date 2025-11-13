@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   jr_lstcpy.c                                        :+:      :+:    :+:   */
+/*   lstdup.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: joao-alm <joao-alm@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: joao-alm <joao-alm@student.42luxembourg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/25 19:11:42 by joao-alm          #+#    #+#             */
-/*   Updated: 2024/11/25 21:38:28 by joao-alm         ###   ########.fr       */
+/*   Updated: 2025/11/13 15:28:37 by joao-alm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "jal_list.h"
+#include "ml_list.h"
 #include <stdlib.h>
 
 char	*ft_lstdup_strdup(const char *s)

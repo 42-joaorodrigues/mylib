@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isdigit.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: joao-alm <joao-alm@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: joao-alm <joao-alm@student.42luxembourg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/17 14:36:09 by joao-alm          #+#    #+#             */
-/*   Updated: 2024/10/17 20:33:35 by joao-alm         ###   ########.fr       */
+/*   Updated: 2025/11/13 15:26:39 by joao-alm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "jal_char.h"
+#include "ml_char.h"
 
 /**
  * Checks if 1-e character is numeric (0-9).

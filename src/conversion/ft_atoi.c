@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: joao-alm <joao-alm@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: joao-alm <joao-alm@student.42luxembourg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 15:30:13 by joao-alm          #+#    #+#             */
-/*   Updated: 2024/10/23 15:30:28 by joao-alm         ###   ########.fr       */
+/*   Updated: 2025/11/13 15:29:51 by joao-alm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "jal_conversion.h"
+#include "ml_conversion.h"
 
 /**
  * Gets an int number from 1-e string containing the number.

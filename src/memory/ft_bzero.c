@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: joao-alm <joao-alm@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: joao-alm <joao-alm@student.42luxembourg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/18 22:58:03 by joao-alm          #+#    #+#             */
-/*   Updated: 2024/10/18 22:58:05 by joao-alm         ###   ########.fr       */
+/*   Updated: 2025/11/13 15:28:12 by joao-alm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "jal_memory.h"
+#include "ml_memory.h"
 
 /**
  * Fills the first 'n' bytes of the area pointed by 's'

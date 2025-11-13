@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isascii.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: joao-alm <joao-alm@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: joao-alm <joao-alm@student.42luxembourg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/17 22:16:32 by joao-alm          #+#    #+#             */
-/*   Updated: 2024/10/17 22:16:40 by joao-alm         ###   ########.fr       */
+/*   Updated: 2025/11/13 15:26:39 by joao-alm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "jal_char.h"
+#include "ml_char.h"
 
 /**
  * Checks if 1-e character is an ASCII table character.

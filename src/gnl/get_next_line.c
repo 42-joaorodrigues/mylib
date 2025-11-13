@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_get_next_line_bonus.c                           :+:      :+:    :+:   */
+/*   get_next_line.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: joao-alm <support@toujoustudios.net>       +#+  +:+       +#+        */
+/*   By: joao-alm <joao-alm@student.42luxembourg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 17:02:20 by joao-alm          #+#    #+#             */
-/*   Updated: 2024/11/08 17:02:20 by joao-alm         ###   ########.fr       */
+/*   Updated: 2025/11/13 15:29:00 by joao-alm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "jal_gnl.h"
+#include "ml_gnl.h"
 #include <unistd.h>
 
 char	*ft_join_free(char *s1, char *s2)

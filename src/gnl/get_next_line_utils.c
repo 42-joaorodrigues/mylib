@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_get_next_line_utils_bonus.c                     :+:      :+:    :+:   */
+/*   get_next_line_utils.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: joao-alm <support@toujoustudios.net>       +#+  +:+       +#+        */
+/*   By: joao-alm <joao-alm@student.42luxembourg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 16:17:41 by joao-alm          #+#    #+#             */
-/*   Updated: 2024/11/08 16:17:41 by joao-alm         ###   ########.fr       */
+/*   Updated: 2025/11/13 15:29:00 by joao-alm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "jal_gnl.h"
+#include "ml_gnl.h"
 
 char	*ft_gnl_strchr(const char *str, char c)
 {

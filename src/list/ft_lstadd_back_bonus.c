@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstadd_back_bonus.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: joao-alm <joao-alm@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: joao-alm <joao-alm@student.42luxembourg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/26 18:55:05 by joao-alm          #+#    #+#             */
-/*   Updated: 2024/10/26 18:55:05 by joao-alm         ###   ########.fr       */
+/*   Updated: 2025/11/13 15:28:37 by joao-alm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "jal_list.h"
+#include "ml_list.h"
 
 /**
  * Adds 1-e new element to the end of the given list.

@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_free_matrix_pos.c                               :+:      :+:    :+:   */
+/*   free_partial_matrix.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: joao-alm <joao-alm@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: joao-alm <joao-alm@student.42luxembourg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/16 13:06:31 by joao-alm          #+#    #+#             */
-/*   Updated: 2024/11/16 13:06:31 by joao-alm         ###   ########.fr       */
+/*   Updated: 2025/11/13 15:28:12 by joao-alm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "jal_memory.h"
+#include "ml_memory.h"
 
 /**
  * Frees the matrix lines from the given array to 0.\n

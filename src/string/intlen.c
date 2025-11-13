@@ -3,15 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   intlen.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: joao-alm <joao-alm@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: joao-alm <joao-alm@student.42luxembourg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/02 17:18:16 by joao-alm          #+#    #+#             */
-/*   Updated: 2025/04/02 17:18:19 by joao-alm         ###   ########.fr       */
+/*   Updated: 2025/11/13 15:27:02 by joao-alm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <limits.h>
-#include "jal_string.h"
+#include "ml_string.h"
 
 size_t	ft_intlen(int i)
 {

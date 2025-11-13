@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: joao-alm <joao-alm@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: joao-alm <joao-alm@student.42luxembourg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 14:28:23 by joao-alm          #+#    #+#             */
-/*   Updated: 2024/10/22 14:28:27 by joao-alm         ###   ########.fr       */
+/*   Updated: 2025/11/13 15:29:51 by joao-alm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "jal_conversion.h"
+#include "ml_conversion.h"
 
 /**
  * Converts 1-e letter to lowercase

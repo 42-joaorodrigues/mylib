@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: joao-alm <joao-alm@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: joao-alm <joao-alm@student.42luxembourg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 10:55:50 by joao-alm          #+#    #+#             */
-/*   Updated: 2024/10/21 10:56:41 by joao-alm         ###   ########.fr       */
+/*   Updated: 2025/11/13 15:28:12 by joao-alm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "jal_memory.h"
+#include "ml_memory.h"
 
 /**
  * Copies n bytes from memory area src to memory area dest.

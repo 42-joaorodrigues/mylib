@@ -3,15 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   lstdetach.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: joao-alm <joao-alm@student.42luxembourg.>  +#+  +:+       +#+        */
+/*   By: joao-alm <joao-alm@student.42luxembourg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/17 11:20:33 by joao-alm          #+#    #+#             */
-/*   Updated: 2024/12/17 11:20:33 by joao-alm         ###   ########.fr       */
+/*   Updated: 2025/11/13 15:28:37 by joao-alm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
-#include "jal_list.h"
+#include "ml_list.h"
 
 t_list	*ft_lstdetach(t_list **head, t_list *node)
 {

@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: joao-alm <joao-alm@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: joao-alm <joao-alm@student.42luxembourg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/26 15:31:24 by joao-alm          #+#    #+#             */
-/*   Updated: 2024/10/26 15:32:44 by joao-alm         ###   ########.fr       */
+/*   Updated: 2025/11/13 15:27:44 by joao-alm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "jal_print.h"
+#include "ml_print.h"
 #include <unistd.h>
 
 static int	ft_strlen(const char *str)

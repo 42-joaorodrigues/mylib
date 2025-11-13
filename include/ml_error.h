@@ -1,32 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   colour.h                                           :+:      :+:    :+:   */
+/*   ml_error.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: joao-alm <joao-alm@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/15 16:18:28 by joao-alm          #+#    #+#             */
-/*   Updated: 2025/04/15 16:18:44 by joao-alm         ###   ########.fr       */
+/*   Created: 2025/04/15 17:37:17 by joao-alm          #+#    #+#             */
+/*   Updated: 2025/04/15 17:37:23 by joao-alm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef JAL_COLOUR_H
-# define JAL_COLOUR_H
+#ifndef ML_ERROR_H
+# define ML_ERROR_H
 
-// Colours
-# define PINK "\033[38;5;211m"
-# define YELLOW "\033[38;5;228m"
-# define GREEN "\033[38;5;121m"
-# define PURPLE "\033[38;5;141m"
-# define BOLD "\033[1m"
-# define RESET "\033[0m"
+# define ERROR_PINK "\033[38;5;211m"
+# define ERROR_RESET "\033[0m"
 
-// Debug
-// # define PINK ""
-// # define RESET ""
-// # define YELLOW ""
-// # define GREEN ""
-// # define PURPLE ""
-// # define BOLD ""
+# define E_NOMEM 69
+# define E_FD_OPEN 70
 
-#endif // JAL_COLOUR_H
+int	*ft_exit_code(void);
+int	ft_error(const char *err_str, int err_no);
+
+#endif // JAL_ERROR_H

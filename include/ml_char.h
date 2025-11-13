@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   lib_char.h                                         :+:      :+:    :+:   */
+/*   ml_char.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: joao-alm <joao-alm@student.42luxembourg.>  +#+  +:+       +#+        */
+/*   By: joao-alm <joao-alm@student.42luxembourg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/07 16:42:24 by joao-alm          #+#    #+#             */
-/*   Updated: 2025/01/08 16:13:50 by joao-alm         ###   ########.fr       */
+/*   Updated: 2025/11/13 15:30:21 by joao-alm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef JAL_CHAR_H
-# define JAL_CHAR_H
+#ifndef ML_CHAR_H
+# define ML_CHAR_H
 
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);

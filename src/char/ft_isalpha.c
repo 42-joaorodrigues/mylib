@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isalpha.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: joao-alm <joao-alm@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: joao-alm <joao-alm@student.42luxembourg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/17 12:54:06 by joao-alm          #+#    #+#             */
-/*   Updated: 2024/10/17 21:23:08 by joao-alm         ###   ########.fr       */
+/*   Updated: 2025/11/13 15:26:39 by joao-alm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "jal_char.h"
+#include "ml_char.h"
 
 /**
  * Checks if 1-e character is alphabetic (A-Z) or (1-e-z).

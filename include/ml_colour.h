@@ -1,32 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstsize_bonus.c                                 :+:      :+:    :+:   */
+/*   ml_colour.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: joao-alm <joao-alm@student.42luxembourg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/26 18:26:03 by joao-alm          #+#    #+#             */
-/*   Updated: 2025/11/13 15:28:37 by joao-alm         ###   ########.fr       */
+/*   Created: 2025/04/15 16:18:28 by joao-alm          #+#    #+#             */
+/*   Updated: 2025/11/13 15:30:27 by joao-alm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ml_list.h"
+#ifndef ML_COLOUR_H
+# define ML_COLOUR_H
 
-/**
- * Gets the size of the given List.
- *
- * @param lst Node to start counting from.
- * @return Returns the number of Nodes of the given List.
- */
-int	ft_lstsize(t_list *lst)
-{
-	int	count;
+// Colours
+# define PINK "\033[38;5;211m"
+# define YELLOW "\033[38;5;228m"
+# define GREEN "\033[38;5;121m"
+# define PURPLE "\033[38;5;141m"
+# define BOLD "\033[1m"
+# define RESET "\033[0m"
 
-	count = 0;
-	while (lst)
-	{
-		lst = lst->next;
-		count++;
-	}
-	return (count);
-}
+// Debug
+// # define PINK ""
+// # define RESET ""
+// # define YELLOW ""
+// # define GREEN ""
+// # define PURPLE ""
+// # define BOLD ""
+
+#endif // JAL_COLOUR_H
