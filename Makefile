@@ -158,15 +158,15 @@ $(PRE_COMP):
 
 .progress:
 	@for i in 10 20 30 40 50 60 70 80 90; do \
-		if [ $$i -eq 10 ]; then printf "%12.12s %10.10s ⣿⣀⣀⣀⣀⣀⣀⣀⣀⣀ $$i%%\r" $(ACTION) $(OBJECT); fi; \
-		if [ $$i -eq 20 ]; then printf "%12.12s %10.10s ⣿⣿⣀⣀⣀⣀⣀⣀⣀⣀ $$i%%\r" $(ACTION) $(OBJECT); fi; \
-		if [ $$i -eq 30 ]; then printf "%12.12s %10.10s ⣿⣿⣿⣀⣀⣀⣀⣀⣀⣀ $$i%%\r" $(ACTION) $(OBJECT); fi; \
-		if [ $$i -eq 40 ]; then printf "%12.12s %10.10s ⣿⣿⣿⣿⣀⣀⣀⣀⣀⣀ $$i%%\r" $(ACTION) $(OBJECT); fi; \
-		if [ $$i -eq 50 ]; then printf "%12.12s %10.10s ⣿⣿⣿⣿⣿⣀⣀⣀⣀⣀ $$i%%\r" $(ACTION) $(OBJECT); fi; \
-		if [ $$i -eq 60 ]; then printf "%12.12s %10.10s ⣿⣿⣿⣿⣿⣿⣀⣀⣀⣀ $$i%%\r" $(ACTION) $(OBJECT); fi; \
-		if [ $$i -eq 70 ]; then printf "%12.12s %10.10s ⣿⣿⣿⣿⣿⣿⣿⣀⣀⣀ $$i%%\r" $(ACTION) $(OBJECT); fi; \
-		if [ $$i -eq 80 ]; then printf "%12.12s %10.10s ⣿⣿⣿⣿⣿⣿⣿⣿⣀⣀ $$i%%\r" $(ACTION) $(OBJECT); fi; \
-		if [ $$i -eq 90 ]; then printf "%12.12s %10.10s ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣀ $$i%%\r" $(ACTION) $(OBJECT); fi; \
+		if [ $$i -eq 10 ]; then printf "%-12.12s %-10.10s ⣿⣀⣀⣀⣀⣀⣀⣀⣀⣀ $$i%%\r" $(ACTION) $(OBJECT); fi; \
+		if [ $$i -eq 20 ]; then printf "%-12.12s %-10.10s ⣿⣿⣀⣀⣀⣀⣀⣀⣀⣀ $$i%%\r" $(ACTION) $(OBJECT); fi; \
+		if [ $$i -eq 30 ]; then printf "%-12.12s %-10.10s ⣿⣿⣿⣀⣀⣀⣀⣀⣀⣀ $$i%%\r" $(ACTION) $(OBJECT); fi; \
+		if [ $$i -eq 40 ]; then printf "%-12.12s %-10.10s ⣿⣿⣿⣿⣀⣀⣀⣀⣀⣀ $$i%%\r" $(ACTION) $(OBJECT); fi; \
+		if [ $$i -eq 50 ]; then printf "%-12.12s %-10.10s ⣿⣿⣿⣿⣿⣀⣀⣀⣀⣀ $$i%%\r" $(ACTION) $(OBJECT); fi; \
+		if [ $$i -eq 60 ]; then printf "%-12.12s %-10.10s ⣿⣿⣿⣿⣿⣿⣀⣀⣀⣀ $$i%%\r" $(ACTION) $(OBJECT); fi; \
+		if [ $$i -eq 70 ]; then printf "%-12.12s %-10.10s ⣿⣿⣿⣿⣿⣿⣿⣀⣀⣀ $$i%%\r" $(ACTION) $(OBJECT); fi; \
+		if [ $$i -eq 80 ]; then printf "%-12.12s %-10.10s ⣿⣿⣿⣿⣿⣿⣿⣿⣀⣀ $$i%%\r" $(ACTION) $(OBJECT); fi; \
+		if [ $$i -eq 90 ]; then printf "%-12.12s %-10.10s ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣀ $$i%%\r" $(ACTION) $(OBJECT); fi; \
 		sleep 0.05; \
 	done; \
 	printf "$(RESET)"
