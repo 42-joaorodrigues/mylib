@@ -125,20 +125,20 @@ $(O_DIR)/%.o: %.c
 
 $(NAME): $(PRE_COMP) $(OBJ)
 	@$(LIBC) $@ $(OBJ)
-	@make .success TEXT="Compiling $(NAME)" --no-print-directory
+	@make .success ACTION="Compiling" OBJECT=$(NAME) --no-print-directory
 
 #─────────────────────────────────Cleaning Commands───────────────────────────#
 
 clean:
-	@make .progress TEXT="Cleaning  $(NAME)" --no-print-directory
+	@make .progress ACTION="Cleaning" OBJECT=$(NAME) --no-print-directory
 	@rm -rf $(O_DIR)
-	@make .success TEXT="Cleaning  $(NAME)" --no-print-directory
+	@make .success ACTION="Cleaning" OBJECT=$(NAME) --no-print-directory
 
 fclean:
-	@make .progress TEXT="Cleaning  $(NAME)" --no-print-directory
+	@make .progress ACTION="Cleaning" OBJECT=$(NAME) --no-print-directory
 	@rm -rf $(O_DIR)
 	@rm -rf $(NAME)
-	@make .success TEXT="Cleaning  $(NAME)" --no-print-directory
+	@make .success ACTION="Cleaning" OBJECT=$(NAME) --no-print-directory
 
 re: fclean all
 
@@ -154,25 +154,25 @@ RESET	= \033[0m
 $(PRE_COMP):
 	@mkdir -p $(dir $@)
 	@touch $@
-	@make .progress TEXT="Compiling $(NAME)" --no-print-directory
+	@make .progress ACTION="Compiling" OBJECT=$(NAME) --no-print-directory
 
 .progress:
 	@for i in 10 20 30 40 50 60 70 80 90; do \
-		if [ $$i -eq 10 ]; then printf "$(TEXT) ⣿⣀⣀⣀⣀⣀⣀⣀⣀⣀ $$i%%\r"; fi; \
-		if [ $$i -eq 20 ]; then printf "$(TEXT) ⣿⣿⣀⣀⣀⣀⣀⣀⣀⣀ $$i%%\r"; fi; \
-		if [ $$i -eq 30 ]; then printf "$(TEXT) ⣿⣿⣿⣀⣀⣀⣀⣀⣀⣀ $$i%%\r"; fi; \
-		if [ $$i -eq 40 ]; then printf "$(TEXT) ⣿⣿⣿⣿⣀⣀⣀⣀⣀⣀ $$i%%\r"; fi; \
-		if [ $$i -eq 50 ]; then printf "$(TEXT) ⣿⣿⣿⣿⣿⣀⣀⣀⣀⣀ $$i%%\r"; fi; \
-		if [ $$i -eq 60 ]; then printf "$(TEXT) ⣿⣿⣿⣿⣿⣿⣀⣀⣀⣀ $$i%%\r"; fi; \
-		if [ $$i -eq 70 ]; then printf "$(TEXT) ⣿⣿⣿⣿⣿⣿⣿⣀⣀⣀ $$i%%\r"; fi; \
-		if [ $$i -eq 80 ]; then printf "$(TEXT) ⣿⣿⣿⣿⣿⣿⣿⣿⣀⣀ $$i%%\r"; fi; \
-		if [ $$i -eq 90 ]; then printf "$(TEXT) ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣀ $$i%%\r"; fi; \
+		if [ $$i -eq 10 ]; then printf "%12.12s %10.10s ⣿⣀⣀⣀⣀⣀⣀⣀⣀⣀ $$i%%\r" $(ACTION) $(OBJECT); fi; \
+		if [ $$i -eq 20 ]; then printf "%12.12s %10.10s ⣿⣿⣀⣀⣀⣀⣀⣀⣀⣀ $$i%%\r" $(ACTION) $(OBJECT); fi; \
+		if [ $$i -eq 30 ]; then printf "%12.12s %10.10s ⣿⣿⣿⣀⣀⣀⣀⣀⣀⣀ $$i%%\r" $(ACTION) $(OBJECT); fi; \
+		if [ $$i -eq 40 ]; then printf "%12.12s %10.10s ⣿⣿⣿⣿⣀⣀⣀⣀⣀⣀ $$i%%\r" $(ACTION) $(OBJECT); fi; \
+		if [ $$i -eq 50 ]; then printf "%12.12s %10.10s ⣿⣿⣿⣿⣿⣀⣀⣀⣀⣀ $$i%%\r" $(ACTION) $(OBJECT); fi; \
+		if [ $$i -eq 60 ]; then printf "%12.12s %10.10s ⣿⣿⣿⣿⣿⣿⣀⣀⣀⣀ $$i%%\r" $(ACTION) $(OBJECT); fi; \
+		if [ $$i -eq 70 ]; then printf "%12.12s %10.10s ⣿⣿⣿⣿⣿⣿⣿⣀⣀⣀ $$i%%\r" $(ACTION) $(OBJECT); fi; \
+		if [ $$i -eq 80 ]; then printf "%12.12s %10.10s ⣿⣿⣿⣿⣿⣿⣿⣿⣀⣀ $$i%%\r" $(ACTION) $(OBJECT); fi; \
+		if [ $$i -eq 90 ]; then printf "%12.12s %10.10s ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣀ $$i%%\r" $(ACTION) $(OBJECT); fi; \
 		sleep 0.05; \
 	done; \
 	printf "$(RESET)"
 
 .success:
-	@printf "$(TEXT) $(GREEN)⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿ 100%%$(RESET)\n"
+	@printf "%-12.12s %-10.10s $(GREEN)⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿ 100%%$(RESET)\n" $(ACTION) $(OBJECT)
 
 #────────────────────────────────Phony Targets───────────────────────────────#
 
