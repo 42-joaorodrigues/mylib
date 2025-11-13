@@ -11,7 +11,9 @@ CC				= cc
 CFLAGS			= -Wall -Werror -Wextra
 RM				= rm -rf
 O_DIR			= obj
-HEADER			= $(O_DIR)/.header
+PRE_COMP		= $(O_DIR)/.pre_comp
+
+all: $(NAME)
 
 #──────────────────────────────────────Sources────────────────────────────────#
 
@@ -112,18 +114,16 @@ SRC_STRING		:= $(addprefix string/, $(SRC_STRING))
 SRC				= $(SRC_CHAR) $(SRC_CONV) $(SRC_GNL) $(SRC_LIST) \
 				  $(SRC_MEM) $(SRC_PRINT) $(SRC_STRING) $(SRC_ERROR)
 SRC				:= $(addprefix src/, $(SRC))
-INC				= -I include
+INC				= -I inc
 OBJ				= $(SRC:%.c=$(O_DIR)/%.o)
 
 #───────────────────────────────Compilation Commands──────────────────────────#
-
-all: $(NAME)
 
 $(O_DIR)/%.o: %.c
 	@mkdir -p $(dir $@)
 	@$(CC) $(CFLAGS) -c $< -o $@ $(INC)
 
-$(NAME): $(HEADER) $(OBJ)
+$(NAME): $(PRE_COMP) $(OBJ)
 	@$(LIBC) $@ $(OBJ)
 	@make .success TEXT="Compiling $(NAME)" --no-print-directory
 
@@ -142,16 +142,16 @@ fclean:
 
 re: fclean all
 
-#────────────────────────────────────────Colors───────────────────────────────#
+#────────────────────────────────────Colors───────────────────────────────────#
 
 YELLOW	= \033[38;2;255;248;147m# FFF893
 PINK	= \033[38;2;231;133;190m# E785BE
 GREEN	= \033[38;2;129;223;164m# 81DFA4
 RESET	= \033[0m
 
-#──────────────────────────────────Animation Rules───────────────────────────#
+#─────────────────────────────────Animation Rules────────────────────────────#
 
-$(HEADER):
+$(PRE_COMP):
 	@mkdir -p $(dir $@)
 	@touch $@
 	@make .progress TEXT="Compiling $(NAME)" --no-print-directory
@@ -174,5 +174,6 @@ $(HEADER):
 .success:
 	@printf "$(TEXT) $(GREEN)⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿ 100%%$(RESET)\n"
 
-# Phony
+#────────────────────────────────Phony Targets───────────────────────────────#
+
 .PHONY: all clean fclean re
