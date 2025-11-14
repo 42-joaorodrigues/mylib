@@ -119,26 +119,28 @@ OBJ				= $(SRC:%.c=$(O_DIR)/%.o)
 
 #───────────────────────────────Compilation Commands──────────────────────────#
 
+DISPLAY_NAME = mylib
+
 $(O_DIR)/%.o: %.c
 	@mkdir -p $(dir $@)
 	@$(CC) $(CFLAGS) -c $< -o $@ $(INC)
 
 $(NAME): $(PRE_COMP) $(OBJ)
 	@$(LIBC) $@ $(OBJ)
-	@make .success ACTION="Compiling" OBJECT=$(NAME) --no-print-directory
+	@make .success ACTION="Compiling" OBJECT=$(DISPLAY_NAME) --no-print-directory
 
 #─────────────────────────────────Cleaning Commands───────────────────────────#
 
 clean:
-	@make .progress ACTION="Cleaning" OBJECT=$(NAME) --no-print-directory
+	@make .progress ACTION="Cleaning" OBJECT=$(DISPLAY_NAME) --no-print-directory
 	@rm -rf $(O_DIR)
-	@make .success ACTION="Cleaning" OBJECT=$(NAME) --no-print-directory
+	@make .success ACTION="Cleaning" OBJECT=$(NADISPLAY_NAMEME) --no-print-directory
 
 fclean:
-	@make .progress ACTION="Cleaning" OBJECT=$(NAME) --no-print-directory
+	@make .progress ACTION="Cleaning" OBJECT=$(DISPLAY_NAME) --no-print-directory
 	@rm -rf $(O_DIR)
 	@rm -rf $(NAME)
-	@make .success ACTION="Cleaning" OBJECT=$(NAME) --no-print-directory
+	@make .success ACTION="Cleaning" OBJECT=$(DISPLAY_NAME) --no-print-directory
 
 re: fclean all
 
@@ -154,7 +156,7 @@ RESET	= \033[0m
 $(PRE_COMP):
 	@mkdir -p $(dir $@)
 	@touch $@
-	@make .progress ACTION="Compiling" OBJECT=$(NAME) --no-print-directory
+	@make .progress ACTION="Compiling" OBJECT=$(DISPLAY_NAME) --no-print-directory
 
 .progress:
 	@for i in 10 20 30 40 50 60 70 80 90; do \
