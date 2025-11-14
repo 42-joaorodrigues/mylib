@@ -6,7 +6,7 @@
 /*   By: joao-alm <joao-alm@student.42luxembourg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/26 19:11:11 by joao-alm          #+#    #+#             */
-/*   Updated: 2025/11/13 15:28:37 by joao-alm         ###   ########.fr       */
+/*   Updated: 2025/11/14 14:33:32 by joao-alm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 	while (*lst)
 	{
 		current = *lst;
-		if (del || (*lst)->content)
+		if (del && (*lst)->content)
 			del((*lst)->content);
 		*lst = (*lst)->next;
 		free(current);
