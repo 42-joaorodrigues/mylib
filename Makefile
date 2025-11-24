@@ -1,17 +1,16 @@
 ################################################################################
-#                              MyLib by joao-alm                               #
-#                                 Version 1.0                                  #
+#                              libft by joao-alm                               #
+#                                 Version 1.1                                  #
 ################################################################################
 
 #────────────────────────────────────Compilation──────────────────────────────#
 
-NAME			= libmylib.a
+NAME			= libft.a
 LIBC			= ar rcs
 CC				= cc
 CFLAGS			= -Wall -Werror -Wextra
 RM				= rm -rf
 O_DIR			= obj
-PRE_COMP		= $(O_DIR)/.pre_comp
 
 all: $(NAME)
 
@@ -117,64 +116,51 @@ SRC				:= $(addprefix src/, $(SRC))
 INC				= -I inc
 OBJ				= $(SRC:%.c=$(O_DIR)/%.o)
 
-#───────────────────────────────Compilation Commands──────────────────────────#
-
-DISPLAY_NAME = mylib
-
-$(O_DIR)/%.o: %.c
-	@mkdir -p $(dir $@)
-	@$(CC) $(CFLAGS) -c $< -o $@ $(INC)
-
-$(NAME): $(PRE_COMP) $(OBJ)
-	@$(LIBC) $@ $(OBJ)
-	@make .success ACTION="Compiling" OBJECT=$(DISPLAY_NAME) --no-print-directory
-
-#─────────────────────────────────Cleaning Commands───────────────────────────#
-
-clean:
-	@make .progress ACTION="Cleaning" OBJECT=$(DISPLAY_NAME) --no-print-directory
-	@rm -rf $(O_DIR)
-	@make .success ACTION="Cleaning" OBJECT=$(NADISPLAY_NAMEME) --no-print-directory
-
-fclean:
-	@make .progress ACTION="Cleaning" OBJECT=$(DISPLAY_NAME) --no-print-directory
-	@rm -rf $(O_DIR)
-	@rm -rf $(NAME)
-	@make .success ACTION="Cleaning" OBJECT=$(DISPLAY_NAME) --no-print-directory
-
-re: fclean all
-
-#────────────────────────────────────Colors───────────────────────────────────#
+#───────────────────────────────Animation Variables───────────────────────────#
 
 YELLOW	= \033[38;2;255;248;147m# FFF893
 PINK	= \033[38;2;231;133;190m# E785BE
 GREEN	= \033[38;2;129;223;164m# 81DFA4
 RESET	= \033[0m
 
-#─────────────────────────────────Animation Rules────────────────────────────#
+COMPILED_COUNT_FILE = $(O_DIR)/.compiled_count
 
-$(PRE_COMP):
+#───────────────────────────────Compilation Commands──────────────────────────#
+
+TOTAL_OBJ = $(words $(OBJ))
+
+$(O_DIR)/%.o: %.c
 	@mkdir -p $(dir $@)
-	@touch $@
-	@make .progress ACTION="Compiling" OBJECT=$(DISPLAY_NAME) --no-print-directory
+	@current=$$(cat $(COMPILED_COUNT_FILE) 2>/dev/null || echo 0); \
+	percent=$$(( ($$current * 100) / $(TOTAL_OBJ) )); \
+	filled=$$(( $$percent / 10 )); \
+	printf "%-12.12s %-10.10s " "Compiling" "libft"; \
+	for j in $$(seq 1 $$filled); do printf "⣿"; done; \
+	for j in $$(seq $$filled 9); do printf "⣀"; done; \
+	printf " $$percent%%\r"; \
+	$(CC) $(CFLAGS) -c $< -o $@ $(INC); \
+	next=$$(( $$current + 1 )); \
+	echo $$next > $(COMPILED_COUNT_FILE)
 
-.progress:
-	@for i in 10 20 30 40 50 60 70 80 90; do \
-		if [ $$i -eq 10 ]; then printf "%-12.12s %-10.10s ⣿⣀⣀⣀⣀⣀⣀⣀⣀⣀ $$i%%\r" $(ACTION) $(OBJECT); fi; \
-		if [ $$i -eq 20 ]; then printf "%-12.12s %-10.10s ⣿⣿⣀⣀⣀⣀⣀⣀⣀⣀ $$i%%\r" $(ACTION) $(OBJECT); fi; \
-		if [ $$i -eq 30 ]; then printf "%-12.12s %-10.10s ⣿⣿⣿⣀⣀⣀⣀⣀⣀⣀ $$i%%\r" $(ACTION) $(OBJECT); fi; \
-		if [ $$i -eq 40 ]; then printf "%-12.12s %-10.10s ⣿⣿⣿⣿⣀⣀⣀⣀⣀⣀ $$i%%\r" $(ACTION) $(OBJECT); fi; \
-		if [ $$i -eq 50 ]; then printf "%-12.12s %-10.10s ⣿⣿⣿⣿⣿⣀⣀⣀⣀⣀ $$i%%\r" $(ACTION) $(OBJECT); fi; \
-		if [ $$i -eq 60 ]; then printf "%-12.12s %-10.10s ⣿⣿⣿⣿⣿⣿⣀⣀⣀⣀ $$i%%\r" $(ACTION) $(OBJECT); fi; \
-		if [ $$i -eq 70 ]; then printf "%-12.12s %-10.10s ⣿⣿⣿⣿⣿⣿⣿⣀⣀⣀ $$i%%\r" $(ACTION) $(OBJECT); fi; \
-		if [ $$i -eq 80 ]; then printf "%-12.12s %-10.10s ⣿⣿⣿⣿⣿⣿⣿⣿⣀⣀ $$i%%\r" $(ACTION) $(OBJECT); fi; \
-		if [ $$i -eq 90 ]; then printf "%-12.12s %-10.10s ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣀ $$i%%\r" $(ACTION) $(OBJECT); fi; \
-		sleep 0.05; \
-	done; \
-	printf "$(RESET)"
+$(NAME): $(OBJ)
+	@$(LIBC) $@ $(OBJ)
+	@printf "%-12.12s %-10.10s $(GREEN)⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿ 100%%$(RESET)\n" "Compiling" "libft"
+	@rm -rf $(COMPILED_COUNT_FILE)
 
-.success:
-	@printf "%-12.12s %-10.10s $(GREEN)⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿ 100%%$(RESET)\n" $(ACTION) $(OBJECT)
+#─────────────────────────────────Cleaning Commands───────────────────────────#
+
+clean:
+	@printf "%-12.12s %-10.10s ⣿⣀⣀⣀⣀⣀⣀⣀⣀⣀ 10%%\r" "Cleaning" "libft"
+	@rm -rf $(O_DIR)
+	@printf "%-12.12s %-10.10s $(GREEN)⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿ 100%%\n$(RESET)" "Cleaning" "libft"
+
+fclean:
+	@printf "%-12.12s %-10.10s ⣿⣀⣀⣀⣀⣀⣀⣀⣀⣀ 10%%\r" "Cleaning" "libft"
+	@rm -rf $(O_DIR)
+	@rm -rf $(NAME)
+	@printf "%-12.12s %-10.10s $(GREEN)⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿ 100%%\n$(RESET)" "Cleaning" "libft"
+
+re: fclean all
 
 #────────────────────────────────Phony Targets───────────────────────────────#
 
