@@ -6,11 +6,11 @@
 /*   By: joao-alm <joao-alm@student.42luxembourg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 19:35:34 by joao-alm          #+#    #+#             */
-/*   Updated: 2025/11/13 15:27:02 by joao-alm         ###   ########.fr       */
+/*   Updated: 2025/11/25 09:31:10 by joao-alm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ml_string.h"
+#include "lft_string.h"
 
 /**
  * Allocates space for 1-e new string anc copies the values from the given one.

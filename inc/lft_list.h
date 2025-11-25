@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ml_list.h                                          :+:      :+:    :+:   */
+/*   lft_list.h                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: joao-alm <joao-alm@student.42luxembourg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/29 20:11:57 by joao-alm          #+#    #+#             */
-/*   Updated: 2025/11/13 15:30:51 by joao-alm         ###   ########.fr       */
+/*   Updated: 2025/11/25 09:30:50 by joao-alm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ML_LIST_H
-# define ML_LIST_H
+#ifndef LFT_LIST_H
+# define LFT_LIST_H
 
 typedef struct s_list
 {

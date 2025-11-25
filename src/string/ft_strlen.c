@@ -6,11 +6,11 @@
 /*   By: joao-alm <joao-alm@student.42luxembourg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/18 15:50:01 by joao-alm          #+#    #+#             */
-/*   Updated: 2025/11/13 15:27:02 by joao-alm         ###   ########.fr       */
+/*   Updated: 2025/11/25 09:31:10 by joao-alm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ml_string.h"
+#include "lft_string.h"
 
 /**
  * Counts the length of the given string.

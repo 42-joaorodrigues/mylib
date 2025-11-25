@@ -6,11 +6,11 @@
 /*   By: joao-alm <joao-alm@student.42luxembourg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 15:30:13 by joao-alm          #+#    #+#             */
-/*   Updated: 2025/11/13 15:29:51 by joao-alm         ###   ########.fr       */
+/*   Updated: 2025/11/25 09:31:10 by joao-alm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ml_conversion.h"
+#include "lft_conversion.h"
 
 /**
  * Gets an int number from 1-e string containing the number.

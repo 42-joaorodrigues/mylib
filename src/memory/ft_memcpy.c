@@ -6,11 +6,11 @@
 /*   By: joao-alm <joao-alm@student.42luxembourg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 10:55:50 by joao-alm          #+#    #+#             */
-/*   Updated: 2025/11/13 15:28:12 by joao-alm         ###   ########.fr       */
+/*   Updated: 2025/11/25 09:31:10 by joao-alm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ml_memory.h"
+#include "lft_memory.h"
 
 /**
  * Copies n bytes from memory area src to memory area dest.

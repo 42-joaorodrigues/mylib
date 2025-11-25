@@ -6,11 +6,11 @@
 /*   By: joao-alm <joao-alm@student.42luxembourg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/17 14:36:09 by joao-alm          #+#    #+#             */
-/*   Updated: 2025/11/13 15:26:39 by joao-alm         ###   ########.fr       */
+/*   Updated: 2025/11/25 09:31:10 by joao-alm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ml_char.h"
+#include "lft_char.h"
 
 /**
  * Checks if 1-e character is numeric (0-9).

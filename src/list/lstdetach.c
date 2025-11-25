@@ -6,12 +6,12 @@
 /*   By: joao-alm <joao-alm@student.42luxembourg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/17 11:20:33 by joao-alm          #+#    #+#             */
-/*   Updated: 2025/11/13 15:28:37 by joao-alm         ###   ########.fr       */
+/*   Updated: 2025/11/25 09:31:10 by joao-alm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
-#include "ml_list.h"
+#include "lft_list.h"
 
 t_list	*ft_lstdetach(t_list **head, t_list *node)
 {

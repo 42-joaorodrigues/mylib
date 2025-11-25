@@ -6,11 +6,11 @@
 /*   By: joao-alm <joao-alm@student.42luxembourg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 16:17:41 by joao-alm          #+#    #+#             */
-/*   Updated: 2025/11/13 15:29:00 by joao-alm         ###   ########.fr       */
+/*   Updated: 2025/11/25 09:31:10 by joao-alm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ml_gnl.h"
+#include "lft_gnl.h"
 
 char	*ft_gnl_strchr(const char *str, char c)
 {

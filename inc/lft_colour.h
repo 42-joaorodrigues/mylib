@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ml_colour.h                                        :+:      :+:    :+:   */
+/*   lft_colour.h                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: joao-alm <joao-alm@student.42luxembourg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/15 16:18:28 by joao-alm          #+#    #+#             */
-/*   Updated: 2025/11/13 15:30:27 by joao-alm         ###   ########.fr       */
+/*   Updated: 2025/11/25 09:30:50 by joao-alm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ML_COLOUR_H
-# define ML_COLOUR_H
+#ifndef LFT_COLOUR_H
+# define LFT_COLOUR_H
 
 // Colours
 # define PINK "\033[38;5;211m"

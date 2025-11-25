@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ml_print.h                                         :+:      :+:    :+:   */
+/*   lft_print.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: joao-alm <joao-alm@student.42luxembourg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/30 20:38:36 by joao-alm          #+#    #+#             */
-/*   Updated: 2025/11/13 15:31:02 by joao-alm         ###   ########.fr       */
+/*   Updated: 2025/11/25 09:30:50 by joao-alm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ML_PRINT_H
-# define ML_PRINT_H
+#ifndef LFT_PRINT_H
+# define LFT_PRINT_H
 
 // Put FD
 void	ft_putchar_fd(char c, int fd);
@@ -21,7 +21,7 @@ void	ft_putnbr_fd(const int n, const int fd);
 
 /*
 ** ==========================================================
-**                         FT_Printf
+**                         LFT_Printf
 ** ==========================================================
 */
 

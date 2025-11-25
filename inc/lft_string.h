@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ml_string.h                                       :+:      :+:    :+:   */
+/*   lft_string.h                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: joao-alm <joao-alm@student.42luxembourg.>  +#+  +:+       +#+        */
+/*   By: joao-alm <joao-alm@student.42luxembourg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/29 21:05:08 by joao-alm          #+#    #+#             */
-/*   Updated: 2025/04/14 16:19:08 by joao-alm         ###   ########.fr       */
+/*   Updated: 2025/11/25 09:31:10 by joao-alm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ML_STRING_H
-# define ML_STRING_H
+#ifndef LFT_STRING_H
+# define LFT_STRING_H
 
 # include <stdlib.h>
 
