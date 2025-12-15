@@ -5,7 +5,7 @@ NAME	= libft.a
 LIBCC	= ar rcs
 CC		= cc
 CFLAGS	= -Wall -Werror -Wextra
-O_DIR	= .obj
+O_DIR	= obj
 HEADER	= $(O_DIR)/.header
 
 all: $(NAME)
