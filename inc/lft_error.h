@@ -6,7 +6,7 @@
 /*   By: joao-alm <joao-alm@student.42luxembourg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/15 17:37:17 by joao-alm          #+#    #+#             */
-/*   Updated: 2025/11/25 09:31:10 by joao-alm         ###   ########.fr       */
+/*   Updated: 2025/12/18 09:04:17 by joao-alm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@
 # define E_FD_OPEN 70
 
 int	*ft_exit_code(void);
-int	ft_error(const char *err_str, int err_no);
+int	put_error_msg(const char *err_str);
+int	put_error(const char *err_str, const int err_no);
 
-#endif // JAL_ERROR_H
+#endif

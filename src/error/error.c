@@ -6,12 +6,13 @@
 /*   By: joao-alm <joao-alm@student.42luxembourg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/02 17:01:30 by joao-alm          #+#    #+#             */
-/*   Updated: 2025/12/15 17:15:16 by joao-alm         ###   ########.fr       */
+/*   Updated: 2025/12/18 09:04:10 by joao-alm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "lft_error.h"
 #include <unistd.h>
+#include <stdlib.h>
 
 int	*ft_exit_code(void)
 {
@@ -30,17 +31,18 @@ static int	ft_static_strlen(const char *str)
 	return (i);
 }
 
-static void	ft_puterror(const char *err_str)
+int	put_error_msg(const char *err_str)
 {
 	write(2, "Error: ", 7);
 	write(2, err_str, ft_static_strlen(err_str));
 	write(2, "\n", 1);
+	exit(1);
 }
 
-int	ft_error(const char *err_str, const int err_no)
+int	put_error(const char *err_str, const int err_no)
 {
 	if (err_str)
-		ft_puterror(err_str);
+		put_strerror(err_str);
 	*ft_exit_code() = err_no;
 	return (err_no);
 }
