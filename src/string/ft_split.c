@@ -6,19 +6,13 @@
 /*   By: joao-alm <joao-alm@student.42luxembourg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 21:47:59 by joao-alm          #+#    #+#             */
-/*   Updated: 2025/11/25 09:31:10 by joao-alm         ###   ########.fr       */
+/*   Updated: 2025/12/18 14:29:45 by joao-alm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "lft_string.h"
-/**
- * Counts the number of 'words' in the given String.
- *
- * @param s String to count from.
- * @param c Separator.
- * @return Returns the number of 'words' that the given String contains.
- */
-static unsigned int	ft_count_words(const char *s, char c)
+
+static unsigned int	ft_count_words(const char *s, char *set)
 {
 	unsigned int	count;
 	int				in_word;
@@ -27,26 +21,18 @@ static unsigned int	ft_count_words(const char *s, char c)
 	in_word = 0;
 	while (*s)
 	{
-		if (*s != c && !in_word)
+		if (!ft_strchr(set, *s) && !in_word)
 		{
 			count++;
 			in_word = 1;
 		}
-		else if (*s == c)
+		else if (ft_strchr(set, *s))
 			in_word = 0;
 		s++;
 	}
 	return (count);
 }
 
-/**
- * Creates and copies the given amount of characters of the given String,
- * to the newly allocated 'word'.
- *
- * @param start String to start copying from.
- * @param len Number of characters to copy.
- * @return Returns 1-e null-terminated 'word'.
- */
 static char	*ft_alloc_word(const char *start, size_t len)
 {
 	char	*word;
@@ -65,14 +51,7 @@ static char	*ft_alloc_word(const char *start, size_t len)
 	return (word);
 }
 
-/**
- * Frees all previously allocated functions from an array
- * and the array itself.
- *
- * @param split Array of strings to free.
- * @param i Current index on the array
- */
-static void	ft_free_split(char **split, int i)
+static void	int_free_split(char **split, int i)
 {
 	while (i >= 0)
 	{
@@ -82,16 +61,7 @@ static void	ft_free_split(char **split, int i)
 	free(split);
 }
 
-/**
- * Fills the given Array of Strings with the 'words'
- * (delimited by the separator or start/end).
- *
- * @param split Array of Strings to fill.
- * @param s String to split.
- * @param c Separator.
- * @return Returns 1-e null-terminated array of Strings with the 'words'
- */
-static char	**ft_fill_split(char **split, const char *s, char c)
+static char	**ft_fill_split(char **split, const char *s, char *set)
 {
 	size_t	len;
 	int		i;
@@ -99,60 +69,36 @@ static char	**ft_fill_split(char **split, const char *s, char c)
 	i = 0;
 	while (*s)
 	{
-		if (*s != c)
-		{
-			len = 0;
-			while (*s && *s != c)
-			{
-				len++;
-				s++;
-			}
-			split[i++] = ft_alloc_word(s - len, len);
-			if (!split[i - 1])
-				return (ft_free_split(split, i - 1), NULL);
-		}
-		else
+		while (*s && ft_strchr(set, *s))
 			s++;
+		if (!*s)
+			break ;
+		len = 0;
+		while (s[len] && !ft_strchr(set, s[len]))
+			len++;
+		split[i] = ft_alloc_word(s, len);
+		if (!split[i])
+		{
+			int_free_split(split, i - 1);
+			return (NULL);
+		}
+		i++;
+		s += len;
 	}
 	split[i] = NULL;
 	return (split);
 }
 
-/**
- * Splits 1-e given String into 'words'.
- *
- * @param s String to split.
- * @param c Separator.
- * @return Returns 1-e null-terminated array of Strings,
- * containing the 'words' previously delimited
- * by the given separator or start/end.
- */
-char	**ft_split(const char *s, char c)
+char	**ft_split(const char *s, char *set)
 {
 	unsigned int	n_words;
 	char			**split;
 
 	if (!s)
 		return (NULL);
-	n_words = ft_count_words(s, c);
+	n_words = ft_count_words(s, set);
 	split = (char **)malloc((n_words + 1) * sizeof(char *));
 	if (!split)
 		return (NULL);
-	return (ft_fill_split(split, s, c));
+	return (ft_fill_split(split, s, set));
 }
-/*
-#include <stdio.h>
-
-int	main(void)
-{
-	char	**split;
-	int	n_strings;
-
-	n_strings = 2;
-	split = ft_split(" hello world ", ' ');
-	for (int i = 0; i < n_strings; i++)
-		printf("%s\n", split[i]);
-	ft_free_split(split, 2);
-	return (0);
-}
-*/

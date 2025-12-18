@@ -6,7 +6,7 @@
 /*   By: joao-alm <joao-alm@student.42luxembourg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/29 21:05:08 by joao-alm          #+#    #+#             */
-/*   Updated: 2025/11/25 09:31:10 by joao-alm         ###   ########.fr       */
+/*   Updated: 2025/12/18 14:30:01 by joao-alm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,11 @@
 
 # include <stdlib.h>
 
-char	**ft_split(const char *s, char c);
+/* Split */
+char	**ft_split(const char *s, char *set);
+void	free_split(char **split);
+int		count_split(char **split);
+
 char	*ft_strchr(const char *s, int c);
 char	*ft_strcpy(char *dest, const char *src);
 char	*ft_strcat(char *dest, const char *src);
@@ -29,8 +33,7 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t size);
 size_t	ft_strlen(const char *s);
 char	*ft_strmapi(const char *s, char (*f)(unsigned int, char));
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
-char	*ft_strnstr(const char *big, const char *little,
-			size_t len);
+char	*ft_strnstr(const char *big, const char *little, size_t len);
 char	*ft_strrchr(const char *str, int c);
 char	*ft_strtrim(char const *s1, char const *set);
 size_t	ft_intlen(int i);
@@ -40,4 +43,4 @@ char	*ft_substr(char const *s, unsigned int start, size_t len);
 char	*ft_strjoin_free(char *s1, char *s2, const int to_free);
 int		ft_isempty(char *str);
 
-#endif //JAL_STRING_H
+#endif // JAL_STRING_H

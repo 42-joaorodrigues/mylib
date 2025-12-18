@@ -1,25 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   lft_conversion.h                                   :+:      :+:    :+:   */
+/*   ft_split_util.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: joao-alm <joao-alm@student.42luxembourg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/29 20:08:57 by joao-alm          #+#    #+#             */
-/*   Updated: 2025/12/18 09:34:44 by joao-alm         ###   ########.fr       */
+/*   Created: 2025/10/19 00:18:11 by joao-alm          #+#    #+#             */
+/*   Updated: 2025/12/18 09:29:02 by joao-alm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LFT_CONVERSION_H
-# define LFT_CONVERSION_H
+#include "lft_string.h"
 
-char		*ft_itoa(int n);
-int			ft_atoi(const char *nptr);
-int			ft_toupper(int c);
-int			ft_tolower(int c);
-long long	ft_atoll_valid(const char *str, long long min, long long max,
-				int *valid);
-int			ft_atoi_valid(char *str, int *value);
-int			ft_stod_valid(char *str, double *value);
+void	free_split(char **split)
+{
+	int	i;
 
-#endif // JAL_CONVERSION_H
+	if (!split)
+		return ;
+	i = 0;
+	while (split[i])
+		free(split[i++]);
+	free(split);
+}
+
+int	count_split(char **split)
+{
+	int	i;
+
+	i = 0;
+	while (split[i])
+		i++;
+	return (i);
+}

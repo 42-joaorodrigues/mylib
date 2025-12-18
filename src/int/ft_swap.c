@@ -1,25 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   lft_conversion.h                                   :+:      :+:    :+:   */
+/*   ft_swap.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: joao-alm <joao-alm@student.42luxembourg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/29 20:08:57 by joao-alm          #+#    #+#             */
-/*   Updated: 2025/12/18 09:34:44 by joao-alm         ###   ########.fr       */
+/*   Created: 2025/12/18 09:31:43 by joao-alm          #+#    #+#             */
+/*   Updated: 2025/12/18 09:31:58 by joao-alm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LFT_CONVERSION_H
-# define LFT_CONVERSION_H
+void	ft_swap(int *a, int *b)
+{
+	int	temp;
 
-char		*ft_itoa(int n);
-int			ft_atoi(const char *nptr);
-int			ft_toupper(int c);
-int			ft_tolower(int c);
-long long	ft_atoll_valid(const char *str, long long min, long long max,
-				int *valid);
-int			ft_atoi_valid(char *str, int *value);
-int			ft_stod_valid(char *str, double *value);
-
-#endif // JAL_CONVERSION_H
+	temp = *a;
+	*a = *b;
+	*b = temp;
+}

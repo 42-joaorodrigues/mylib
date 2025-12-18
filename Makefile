@@ -20,7 +20,9 @@ SRC_CHAR		= src/char/ft_isalnum.c \
 # Conversion Files
 SRC_CONV		= src/conversion/atoll_valid.c \
 				  src/conversion/ft_atoi.c \
+				  src/conversion/ft_atoi_valid.c \
 				  src/conversion/ft_itoa.c \
+				  src/conversion/ft_stod_valid.c \
 				  src/conversion/ft_tolower.c \
 				  src/conversion/ft_toupper.c
 
@@ -72,6 +74,7 @@ SRC_PRINT		= src/print/ft_printf.c \
 
 # String Files
 SRC_STRING		= src/string/ft_split.c \
+				  src/string/ft_split_util.c \
 				  src/string/ft_strchr.c \
 				  src/string/ft_strcmp.c \
 				  src/string/ft_strdup.c \

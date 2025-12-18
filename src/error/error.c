@@ -6,7 +6,7 @@
 /*   By: joao-alm <joao-alm@student.42luxembourg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/02 17:01:30 by joao-alm          #+#    #+#             */
-/*   Updated: 2025/12/18 09:04:10 by joao-alm         ###   ########.fr       */
+/*   Updated: 2025/12/18 14:39:23 by joao-alm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,13 +36,13 @@ int	put_error_msg(const char *err_str)
 	write(2, "Error: ", 7);
 	write(2, err_str, ft_static_strlen(err_str));
 	write(2, "\n", 1);
-	exit(1);
+	return (1);
 }
 
 int	put_error(const char *err_str, const int err_no)
 {
 	if (err_str)
-		put_strerror(err_str);
+		put_error_msg(err_str);
 	*ft_exit_code() = err_no;
 	return (err_no);
 }
