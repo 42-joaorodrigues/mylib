@@ -6,13 +6,12 @@
 /*   By: joao-alm <joao-alm@student.42luxembourg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/02 17:01:30 by joao-alm          #+#    #+#             */
-/*   Updated: 2025/12/18 14:39:23 by joao-alm         ###   ########.fr       */
+/*   Updated: 2025/12/18 15:31:38 by joao-alm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "lft_error.h"
 #include <unistd.h>
-#include <stdlib.h>
 
 int	*ft_exit_code(void)
 {
