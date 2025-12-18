@@ -6,12 +6,12 @@
 /*   By: joao-alm <joao-alm@student.42luxembourg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/18 09:30:38 by joao-alm          #+#    #+#             */
-/*   Updated: 2025/12/18 09:33:08 by joao-alm         ###   ########.fr       */
+/*   Updated: 2025/12/18 16:27:13 by joao-alm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LFT_INT
-# define LFT_INT
+#ifndef LFT_INT_H
+# define LFT_INT_H
 
 void	ft_swap(int *a, int *b);
 int		ft_abs(int n);
