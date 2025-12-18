@@ -6,13 +6,12 @@
 /*   By: joao-alm <joao-alm@student.42luxembourg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/02 17:01:30 by joao-alm          #+#    #+#             */
-/*   Updated: 2025/12/18 09:04:10 by joao-alm         ###   ########.fr       */
+/*   Updated: 2025/12/18 09:17:28 by joao-alm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "lft_error.h"
 #include <unistd.h>
-#include <stdlib.h>
 
 int	*ft_exit_code(void)
 {
@@ -36,7 +35,7 @@ int	put_error_msg(const char *err_str)
 	write(2, "Error: ", 7);
 	write(2, err_str, ft_static_strlen(err_str));
 	write(2, "\n", 1);
-	exit(1);
+	return (1);
 }
 
 int	put_error(const char *err_str, const int err_no)
